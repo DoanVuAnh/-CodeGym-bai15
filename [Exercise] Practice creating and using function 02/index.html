@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Exercise] Practice creating and using function 02</title>
+</head>
+<body>
+  <h2>Ex 1</h2>
+   <label>Enter number: </label>
+   <input type="number" id="numSquare" placeholder="Enter Number" oninput="numberSquare()">
+   <p id="outSqu">R</p>
+
+  <h2>Ex 2</h2>
+   <label>Enter Radius</label>
+   <input type="number" id="numRadius" placeholder="Enter Radius" oninput="calculateCircle()">
+   <p id="outS"></p>
+   <p id="outP"></p>
+  <h2>Ex 3</h2>
+    <label>Enter number:</label>
+    <input type="number" id="numFactorial" placeholder="Enter Number" oninput="numberFactorial()">
+    <p id="outFac"></p>
+  <h2>Ex 4</h2>
+     <label>Enter: </label>
+     <input id="checkNum" placeholder="Number check" oninput="checkNumber()">
+     <p id="outCheck"></p>
+    <h2>Ex 5</h2>
+     <input id="minNum" placeholder="find the smallest number" oninput="minNumber()">
+
+
+</body>
+</html>
+<script>
+    function numberSquare(){
+        let squareNum = document.getElementById("numSquare").value;
+        document.getElementById("outSqu").innerHTML = Math.pow(squareNum, 2);
+    }
+    function calculateCircle() {
+        let numRaius = document.getElementById("numRadius").value;
+        document.getElementById("outS").innerHTML = 2 * 3.14 * numRaius;
+        document.getElementById("outP").innerHTML = numRaius * 3.14 * numRaius;
+    }
+    function numberFactorial() {
+        let numFac = +document.getElementById("numFactorial").value;
+        for(let i= numFac; i > 1; i--){
+            numFac = numFac * (i - 1);
+        }
+        document.getElementById("outFac").innerHTML = numFac;
+    }
+    function checkNumber() {
+        let numCheck = +document.getElementById("checkNum").value;
+        document.getElementById("outCheck").innerHTML = Number.isInteger(numCheck);
+    }
+</script>

@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>[Exercise] Convert between feet and meters</title>
+</head>
+<body>
+    <table>
+        <tr>
+           <th><label>Enter Foot:</label></th>
+           <th><input type="number" id="numberFoot" placeholder="Number Foot" oninput="footToMeter()"></th>
+            <th><p>Meter: </p></th>
+           <th><p id="outMeter"></p></th>
+        </tr>
+        <tr>
+            <th><label>Enter Meter:</label></th>
+            <th><input type="number" id="numberMeter" placeholder="Number Meter" oninput="meterToFoot()"></th>
+            <th><p>Food: </p></th>
+            <th><p id="outFoot"></p></th>
+        </tr>
+    </table>
+      <script>
+        function footToMeter(foot){
+          foot = document.getElementById("numberFoot").value;
+          document.getElementById("outMeter").innerHTML = 0.305 * foot;
+        }
+        function meterToFoot() {
+            meter = document.getElementById("numberMeter").value;
+            document.getElementById("outFoot").innerHTML = 0.279 * meter;
+        }
+      </script>
+
+</body>
+</html>
